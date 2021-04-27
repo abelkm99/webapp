@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 sock = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
 
-address = ["88:1B:99:09:E8:96","88:1B:99:06:CA:16"]
+address = ["88:1B:99:09:E8:96","88:1B:99:06:CA:16","88:1B:99:06:D1:54"]
 
 @app.route('/')
 def index():
@@ -16,7 +16,7 @@ def index():
 def get_address():
     # address = lib.get_address()
     # print(address)
-    sock.connect((address[1], 6))
+    sock.connect((address[0], 6))
     
     '''
     TODO:
